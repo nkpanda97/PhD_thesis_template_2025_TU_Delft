@@ -22,7 +22,7 @@ This template is compatible with pdfLaTeX, XeLaTeX, and LuaLaTeX. To comply with
 
 ## Acknowledgement
 
- The following template is majorly based on the report template by Daniel Zwanenveld, which can be found here [https://dzwaneveld.github.io/]( https://dzwaneveld.github.io/). You can also refer there for full documentation of the report class.
+ The following template is mainly based on the report template by Daniel Zwanenveld, which can be found here [https://dzwaneveld.github.io/]( https://dzwaneveld.github.io/). You can also refer there for full documentation of the report class.
 
 ## Usage
 
