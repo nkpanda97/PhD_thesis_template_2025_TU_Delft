@@ -1,17 +1,35 @@
-# TU Delft
+# TU Delft PhD Thesis Template (2025) for $\LaTeX$
 
-This template aims to simplify and improve the (Xe)LaTeX report template by Delft University of Technology. Some of the main features:
+This is an unofficial LaTeX template for writing a PhD thesis at TU Delft. It is based on the official TU Delft report class, but has been heavily modified to improve usability and to simplify customization. The template is designed to meet the requirements of the TU Delft house style as of 2025.
 
-* **Simplicity First:** A class file that has been reduced by nearly 70% to simplify customization;
-* **Effortless:** Many common packages are included to get started immediately;
-* **Complete:** Ready-to-go when it comes to document and file structure.
+> **Note:** This template is not officially endorsed by TU Delft. Please check the latest guidelines from TU Delft for writing a PhD thesis, as they may change over time. But this can be a good starting point.
 
-This template works with _pdfLaTeX_, _XeLaTeX_ and _LuaLaTeX_. In order to adhere to the TU Delft house style, either _XeLaTeX_ or _LuaLaTeX_ is required, as it supports TrueType and OpenType fonts. _BibLaTeX_ is used for the bibliography with as backend _biber_. Please visit https://dzwaneveld.github.io/report for the full documentation.
+## Features
 
-<p align="center">
-  <img align="centre"  src="https://github.com/dzwaneveld/TU-Delft-Unofficial-Report-Template/blob/master/figures/template.png" alt="Preview of the Template" width="85%" />
-</p>
+- Specifically designed for PhD thesises at TU Delft
+- Clean and modern design
+- Customizable title page
+- Support for multiple languages (English and Dutch) for the title page
+- Predefined commands for common elements (e.g., abstract, acknowledgements, etc.)
+- Easy to use and modify
+- Some styles to be used within chapters for keywords, definitions, theorems, etc.
+- Support for including code snippets with syntax highlighting
+- textbox environment for highlighting important information
+
+This template is compatible with pdfLaTeX, XeLaTeX, and LuaLaTeX. To comply with the TU Delft house style, however, you should use either XeLaTeX or LuaLaTeX, since these engines support TrueType and OpenType fonts. The bibliography is handled with BibLaTeX, using biber as the backend.
+
+## Acknowledgement
+
+ The following template is majorly based on the report template by Daniel Zwanenveld, which can be found here [https://dzwaneveld.github.io/]( https://dzwaneveld.github.io/). You can also refer there for full documentation of the report class.
+
+## Usage
+
+This template can be used standalone in any LaTeX editor. Simply download the repository and open the `report.tex` file. You can then modify the content to fit your needs.
+Also, you can copy the `tudreport.cls` file to your local LaTeX directory to use it in other projects.
+Make sure to have the required packages installed. You can find a list of required packages in the `tudreport.cls` file. Moreover, you can use an online LaTeX editor like Overleaf and upload the files there.
+
+Are you curios how the final result looks like? Have a look gere [![PhD Thesis Example](./figures/PhD_thesis_template_2025_TU_Delft.jpg)](PhD_thesis_template_2025_TU_Delft.pdf)
 
 ## License
 
-This template is available under CC BY-NC 4.0. For more information, see https://creativecommons.org/licenses/by-nc/4.0/. No attribution is required in reports/theses created using this template.
+This template is available under the MIT License. For more information, see [https://opensource.org/licenses/MIT](https://opensource.org/licenses/MIT)
