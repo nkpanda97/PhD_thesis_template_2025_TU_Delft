@@ -32,6 +32,9 @@ Make sure to have the required packages installed. You can find a list of requir
 
 Are you curios how the final result looks like? Have a look gere [![PhD Thesis Example](./figures/PhD_thesis_template_2025_TU_Delft.jpg)](PhD_thesis_template_2025_TU_Delft.pdf)
 
+## Contribution
+Contributions are very welcome! 🎉 If you spot any errors, typos, or formatting issues, feel free to correct them. You can also suggest or add new features to improve the template and make it more useful for others. Simply open an issue or submit a pull request; every contribution helps this template get better.
+
 ## License
 
 This template is available under the MIT License. For more information, see [https://opensource.org/licenses/MIT](https://opensource.org/licenses/MIT)
