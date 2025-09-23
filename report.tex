@@ -1,0 +1,219 @@
+\documentclass{layout/TU-Delft-report}
+
+% ----------------------------- %
+% Custom Commands
+% ----------------------------- %
+
+\RenewCommandCopy\qty\SI  % Redefine \qty to use \SI
+
+% Reference Formatting
+\newcommand{\tableme}[1]{Table: \ref{#1}}
+\newcommand{\figref}[1]{Figure: \ref{#1}}
+
+
+% ----------------------------- %
+% Package Imports
+% ----------------------------- %
+
+% Essential Formatting Packages
+
+\let\openbox\relax
+\usepackage{amsthm}
+\usepackage[bottom]{footmisc}
+\usepackage{dirtytalk}
+\usepackage{printlen}
+\usepackage[percent]{overpic}
+
+\usepackage[lines=4]{lettrine}
+\usepackage{cases}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\usepackage{subcaption}
+\newtheorem{definition}{Definition}
+\usepackage{xcolor}
+\definecolor{delft_blue_shade1}{RGB}{12,35,64}
+\definecolor{royal_blue}{RGB}{0, 118, 194}
+\definecolor{delft_blue_shade2}{RGB}{229,246,251}
+\usepackage{parskip}  % Adjust paragraph spacing
+\usepackage{multicol} % Multiple columns
+\usepackage{adjustbox} % Adjusting table and figure sizes
+\usepackage{booktabs} % Better table formatting
+\usepackage{rotating} % Rotating figures and tables
+\usepackage{hhline} % Advanced table lines
+\usepackage{multirow} % Multi-row tables
+\usepackage{tabularx} % Advanced table layout
+\usepackage[graphicx]{realboxes} % Rotating text in tables
+\usepackage{colortbl} % Colored tables
+\usepackage{psfrag} % Replace text in figures
+\usepackage{balance} % Balancing columns in two-column mode
+\usepackage{url}
+\usepackage{threeparttable}
+\usepackage{booktabs} 
+\usepackage{bbm}
+\usepackage{eurosym}
+
+% Algorithm & Pseudocode Packages
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\SetKwInput{KwInput}{Input} % Set input format
+\SetKwInput{KwOutput}{Output} % Set output format
+\usepackage{algpseudocode}
+\let\listofalgorithms\relax
+\usepackage{algorithm}
+
+% Math & Symbols
+\usepackage{amssymb}
+\usepackage[nocomma]{optidef} % Optimization notation
+\usepackage{nomencl} % Nomenclature package
+\makenomenclature
+\usepackage{etoolbox} % Required for nomenclature grouping
+\renewcommand\nomgroup[1]{%
+  \item[\itshape
+  \ifstrequal{#1}{A}{Sets}{%
+  \ifstrequal{#1}{B}{Indices}{%
+  \ifstrequal{#1}{C}{Parameters}{
+  \ifstrequal{#1}{D}{Variables}
+  }}}]}
+\newcommand{\tugradientdot}{
+  \begin{center}
+    \begin{tikzpicture}[baseline]
+      % Left gradient line
+      \shade[left color=gray!50, right color=gray!10]
+        (-6,0) rectangle (0,0.2);
+      % Center dot
+      \node at (0.5,0) {\textbullet};
+      % Right gradient line
+      \shade[left color=gray!10, right color=gray!50]
+        (1,0) rectangle (7,0.2);
+    \end{tikzpicture}
+  \end{center}
+}
+
+% Citations & References
+\usepackage[numbers]{natbib}
+\usepackage[printonlyused]{acronym}
+%% Chapter - 3
+\usepackage{nomencl}
+\makenomenclature
+%% This code creates the groups
+% -----------------------------------------
+\usepackage{etoolbox}
+
+\newcommand{\Drawlegend}[6]{% linewidth, length, color,dashed/solid, marker(0 or 1), markersize
+  \begin{tikzpicture}[baseline=-3pt]
+    \draw[line width=#1, color=#3, #4] (0,0) -- (#2,0);
+    \fill[color=#3] (#2/2,0) circle [radius=#5*#6/2];
+  \end{tikzpicture}%
+}
+
+
+\let\WriteBookmarks\relax
+\def\floatpagepagefraction{1}
+\def\textpagefraction{.001}
+
+% Color Definitions
+\definecolor{c1}{HTML}{fc8d59}
+\definecolor{c2}{HTML}{ef6548}
+\definecolor{c3}{HTML}{d7301f}
+\definecolor{c4}{HTML}{b30000}
+\definecolor{c5}{HTML}{7f0000}
+
+\usepackage{tikz,lipsum,lmodern}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath,amssymb}
+
+\usepackage{array} % required for text wrapping in tables
+
+\newcommand{\redDashedLine}{\textcolor{red}{\rule[0.5ex]{.2em}{0.8pt}\hspace{0.2em}\rule[0.5ex]{.2em}{0.8pt}\hspace{0.2em}\rule[0.5ex]{.2em}{0.8pt}\hspace{0.2em}\rule[0.5ex]{.2em}{0.8pt}}}
+
+\makeatletter
+\newcommand{\printtitle}{\@title}
+\makeatother
+
+\newcommand{\blackDashedLine}{\textcolor{black}{\rule[0.5ex]{.2em}{0.8pt}\hspace{0.2em}\rule[0.5ex]{.2em}{0.8pt}\hspace{0.2em}\rule[0.5ex]{.2em}{0.8pt}\hspace{0.2em}\rule[0.5ex]{.2em}{0.8pt}}}
+%% Chapter design parameters
+% \usepackage[Lenny]{fncychap}
+
+%%----------------------------------------
+%% Keywords new command
+%%----------------------------------------
+\newtcbox{\keywordtag}{
+  on line,
+  colback=delft_blue_shade2,
+  colframe=royal_blue,
+    boxrule=.1pt,
+  arc=1mm,
+  boxsep=1pt,
+  left=8pt, right=8pt,
+  top=2pt, bottom=2pt,
+  height=2.5em,           % �� fixes total box height
+  valign=center,          % centers text inside
+  fontupper=\sffamily\color{royal_blue},
+  enhanced
+}
+
+\def\headline#1{\hbox to \hsize{\hrulefill\quad\lower.5pt\hbox{#1}\quad\hrulefill}}
+
+
+% ----------------------------- %
+% Hyperref Setup
+% ----------------------------- %
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+}
+
+
+\urlstyle{same}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Begin of document %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+
+%% Roman page numbering
+\frontmatter
+
+%% Defining the main parameters
+
+\title{\textbf{My PhD Thesis}}
+
+\subtitle{PhD Thesis Template (2025) for \LaTeX} 
+
+\author{N. K. (Nanda) Panda}
+\subject{Delft University of Technology }
+\affiliation{Delft University of Technology}
+\coverimage{figures/cover_page.pdf} % Aspect ratio of 2:3 (portrait) recommended
+\definecolor{title}{HTML}{4884d6} % Color for title
+\makecover
+\input{frontmatter/title-page-front}
+\input{frontmatter/title-page-reverse}
+
+
+
+\tableofcontents
+
+\input{frontmatter/acronym_list}
+
+%% Arabic page numbering
+\mainmatter
+\input{mainmatter/chapter-1}
+
+% Add bibliography
+\bibliographystyle{IEEEtran}
+
+\bibliography{references.bib}
+\appendix
+
+\input{appendix/appendix_a}
+\input{appendix/appendix_b}
+
+\end{document}
