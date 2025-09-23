@@ -1,5 +1,7 @@
 # TU Delft PhD Thesis Template (2025) for $\LaTeX$
 
+[![Download ZIP](https://img.shields.io/badge/download-zip-brightgreen)](https://github.com/nkpanda97/PhD_thesis_template_2025_TU_Delft/archive/refs/heads/main.zip)
+
 This is an unofficial LaTeX template for writing a PhD thesis at TU Delft. It is based on the official TU Delft report class, but has been heavily modified to improve usability and to simplify customization. The template is designed to meet the requirements of the TU Delft house style as of 2025.
 
 > **Note:** This template is not officially endorsed by TU Delft. Please check the latest guidelines from TU Delft for writing a PhD thesis, as they may change over time. But this can be a good starting point.
