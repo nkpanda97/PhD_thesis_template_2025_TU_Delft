@@ -4,6 +4,16 @@
 
 This is an unofficial LaTeX template for writing a PhD thesis at TU Delft. It is based on the official TU Delft report class, but has been heavily modified to improve usability and to simplify customization. The template is designed to meet the requirements of the TU Delft house style as of 2025.
 
+
+## Quick Setup
+- Star and clone this repository
+- Make it private and choose a name for the repository
+- Go to overleaf.com and click new project
+- Select import from GitHub
+- If not connected previously, it will ask you to connect your GitHub
+- Once connected, choose the newly created repository, and your PhD thesis template is ready to use in Overleaf.
+
+
 > **Note:** This template is not officially endorsed by TU Delft. Please check the latest guidelines from TU Delft for writing a PhD thesis, as they may change over time. But this can be a good starting point.
 
 ## Features
