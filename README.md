@@ -8,7 +8,7 @@ This is an unofficial LaTeX template for writing a PhD thesis at TU Delft. It is
 
 ## Features
 
-- Specifically designed for PhD thesises at TU Delft
+- Specifically designed for PhD theses at TU Delft
 - Clean and modern design
 - Customizable title page
 - Support for multiple languages (English and Dutch) for the title page
